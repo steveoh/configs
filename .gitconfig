@@ -1,0 +1,26 @@
+`git ec`
+
+[user]
+	name = steveoh
+	email = sgourley@utah.gov
+[merge]
+	tool = p4mergetool
+[mergetool]
+	keepBackup = false
+[mergetool "p4mergetool"]
+	trustExitCode = false
+	cmd = 'C:\\Program Files\\Perforce\\p4merge.exe' $PWD/$BASE $PWD/$REMOTE $PWD/$LOCAL $PWD/$MERGED
+[diff]
+	tool = p4mergetool
+[difftool "p4mergetool"]
+	cmd = 'C:\\Program Files\\Perforce\\p4merge.exe' $LOCAL $REMOTE
+[core]
+	editor = 'c:/program files/sublime text 3/sublime_text.exe' -w
+[alias]
+	s = status
+	all = add --all
+	amend = commit --amend
+	publish = !git push origin $@ && git push origin --tags
+	up = !git pull --rebase --prune $@ && git submodule update --init --recursive
+	ec = config --global -e
+	cob = checkout -b
