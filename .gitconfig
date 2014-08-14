@@ -24,3 +24,4 @@
 	up = !git pull --rebase --prune $@ && git submodule update --init --recursive
 	ec = config --global -e
 	cob = checkout -b
+	uc = git reset --soft HEAD~1
