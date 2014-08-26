@@ -4,9 +4,9 @@
       },
       dev: {
         options: {
-          dest: 'src/esri',
           beautify: true
-        }
+        },
+        dest: 'src/esri',
       },
       travis: {
         options: {
@@ -14,3 +14,5 @@
         }
       }
     }
+
+grunt if-missing:esri_slurp:dev
