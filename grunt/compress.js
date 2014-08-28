@@ -9,5 +9,16 @@
                     cwd: 'dist/',
                     expand: true
                 }]
+            },
+            update: {
+                options: {
+                    archive: 'deploy/partial_update.zip'
+                },
+                files: [{
+                    src: ['dojo/dojo.*', 'app/**', '!dojo/dojo.profile.js'],
+                    dest: '/websiteFolder',
+                    cwd: 'dist/',
+                    expand: true
+                }]
             }
         }
