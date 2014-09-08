@@ -6,7 +6,7 @@
         options: {
           beautify: true
         },
-        dest: 'src/esri',
+        dest: 'src/esri'
       },
       travis: {
         options: {
