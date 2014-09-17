@@ -46,13 +46,13 @@ sshexec: {
         password: '<%= secrets.password %>'
     },
     stage: {
-        command: ['cd ' + deployDir, 'unzip -o deploy.zip', 'rm deploy.zip'].join(';'),
+        command: ['cd ' + deployDir, 'unzip -oq deploy.zip', 'rm deploy.zip'].join(';'),
         options: {
             host: '<%= secrets.stageHost %>'
         }
     },
     prod: {
-        command: ['cd ' + deployDir, 'unzip -o deploy.zip', 'rm deploy.zip'].join(';'),
+        command: ['cd ' + deployDir, 'unzip -oq deploy.zip', 'rm deploy.zip'].join(';'),
         options: {
             host: '<%= secrets.prodHost %>'
         }
