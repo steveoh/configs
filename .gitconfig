@@ -25,3 +25,5 @@
 	ec = config --global -e
 	cob = checkout -b
 	uc = git reset --soft HEAD~1
+[push]
+	default = simple
