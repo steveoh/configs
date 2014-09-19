@@ -12,7 +12,6 @@ esri_slurp: {
     },
     travis: {
         options: {
-            beautify: false,
             dest: 'src/esri'
         }
     }
