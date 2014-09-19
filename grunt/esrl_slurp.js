@@ -6,14 +6,12 @@ esri_slurp: {
     },
     dev: {
         options: {
-            beautify: true,
-            dest: 'src/esri'
-        }
+            beautify: true
+        },
+        dest: 'src/esri'
     },
     travis: {
-        options: {
-            dest: 'src/esri'
-        }
+        dest: 'src/esri'
     }
 }
 
