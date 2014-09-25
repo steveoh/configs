@@ -1,4 +1,4 @@
-npm install l grunt-bump --save-dev
+npm install grunt-bump --save-dev
 
 var bumpFiles = [
     'package.json',
