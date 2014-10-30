@@ -1,4 +1,4 @@
-grunt-contrib-compress
+npm install grunt-contrib-compress --save-dev
 
 deployFiles = [
     '**',
