@@ -1,4 +1,4 @@
-grunt-amdcheck
+npm install grunt-amdcheck --save-dev
 
 amdcheck: {
     main: {
