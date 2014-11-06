@@ -10,7 +10,7 @@ var bumpFiles = [
 bump: {
     options: {
         files: bumpFiles,
-        commitFiles: bumpFiles.concat('src/ChangeLog.html'),,
+        commitFiles: bumpFiles.concat('src/ChangeLog.html'),
         push: false
     }
 }
