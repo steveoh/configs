@@ -15,6 +15,17 @@ bump: {
     }
 }
 
+grunt.registerTask('double-bump', function() {
+  grunt.config('bump', {
+    options: {
+        files: differentFiles,
+        commitFiles: differentFiles,
+        push: false
+    },
+  });
+  return grunt.task.run('bump');
+});
+
 grunt bump-only
 // edit change log etc
 grunt bump-commit
