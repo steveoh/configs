@@ -17,6 +17,7 @@
 [core]
 	editor = 'c:/program files/sublime text 3/sublime_text.exe' -w
 [alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
 	s = status
 	all = add --all
 	amend = commit --amend
