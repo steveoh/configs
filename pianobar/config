@@ -1,0 +1,9 @@
+autostart_station = QuickMix
+
+user = 
+password = 
+
+# Format strings
+format_nowplaying_song = [32m%t[0m by [33m%a[0m on [36m%l%r[0m%
+format_nowplaying_station = Station [35m%n[0m
+format_list_song = %i) %a - %t%r
