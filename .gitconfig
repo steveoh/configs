@@ -15,16 +15,22 @@
 [difftool "p4mergetool"]
 	cmd = 'C:\\Program Files\\Perforce\\p4merge.exe' $LOCAL $REMOTE
 [core]
-	editor = 'c:/program files/sublime text 3/sublime_text.exe' -w
+	editor = atom --wait
+	# editor = 'c:/program files/sublime text 3/sublime_text.exe' --wait
 [alias]
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
 	s = status
-	all = add --all
+	all = add --all :/
 	amend = commit --amend
 	publish = !git push origin $@ && git push origin --tags
 	up = !git pull --rebase --prune $@ && git submodule update --init --recursive
 	ec = config --global -e
 	cob = checkout -b
-	uc = git reset --soft HEAD~1
+	uc = reset --soft HEAD~1
+	undo = reset HEAD~1 --mixed
+	wip = !git add -u && git commit -m "WIP"
+[credential]
 [push]
 	default = simple
+[fetch]
+	prune = true
