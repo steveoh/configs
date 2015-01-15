@@ -1,0 +1,44 @@
+{
+	"Seti_no_bar_undertabs": true,
+	"auto_complete_commit_on_tab": true,
+	"auto_indent": true,
+	"bold_folder_labels": true,
+	"caret_style": "phase",
+	"close_windows_when_empty": true,
+	"color_scheme": "Packages/User/SublimeLinter/Seti_monokai (SL).tmTheme",
+	"copy_with_empty_selection": false,
+	"default_line_ending": "system",
+	"detect_indentation": true,
+	"font_face": "Source Code Pro Medium",
+	"font_size": 11,
+	"highlight_line": true,
+	"highlight_modified_tabs": false,
+	"hot_exit": false,
+	"ignored_packages":
+	[
+		"Theme - Afterglow",
+		"Markdown Preview",
+		"GitGutter",
+		"BracketHighlighter",
+		"Autoprefixer",
+		"SublimeCodeIntel"
+	],
+	"ignored_words":
+	[
+	],
+	"indent_to_bracket": false,
+	"scroll_past_end": true,
+	"show_tab_close_buttons": true,
+	"smart_indent": true,
+	"soda_folder_icons": true,
+	"spacegray_tabs_xlarge": true,
+	"spell_check": false,
+	"status_bar_brighter": true,
+	"tabs_small": true,
+	"theme": "Seti.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"trim_automatic_white_space": true,
+	"use_simple_full_screen": true,
+	"vintage_ctrl_keys": true,
+	"vintage_start_in_command_mode": true
+}
