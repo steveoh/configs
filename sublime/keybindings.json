@@ -1,0 +1,41 @@
+[
+  {
+    "keys": [
+      "ctrl+shift+r"
+    ],
+    "command": "reindent",
+    "args": {
+      "single_line": false
+    }
+  },
+  {
+    "keys": [
+      "ctrl+shift+s"
+    ],
+    "command": "save_all"
+  },
+  {
+    "command": "anaconda_auto_format",
+    "keys": [
+      "ctrl+alt+shift+p"
+    ]
+  },
+  {
+    "command": "anaconda_find_usages",
+    "keys": [
+      "ctrl+alt+shift+f"
+    ]
+  },
+  {
+    "keys": [
+      "ctrl+k+ctrl+m"
+    ],
+    "command": "toggle_minimap"
+  },
+  {
+    "keys": [
+      "alt+shift+n"
+    ],
+    "command": "clone_file"
+  }
+]
