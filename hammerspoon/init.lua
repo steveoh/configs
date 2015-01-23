@@ -1,90 +1,46 @@
+local appfinder = require("hs.appfinder")
+local apps = {
+ -- app name, 3 monitor, 2 monitor, 1 monitor location
+  { "Google Chrome", hs.geometry.rect(135, 23, 1083, 873) },
+  { "Wunderlist", hs.geometry.rect(2497, 510, 861, 526) },
+  { "LimeChat", hs.geometry.rect(2636, 167, 720, 342) },
+  { "Twitter", hs.geometry.rect(1440, -138, 394, 1177) },
+  { "Slack", hs.geometry.rect(-1920, -138, 1024, 1177) },
+  { "iTerm", hs.geometry.rect(2717, -138, 640, 315) }
+  -- { "Adium", },
+  -- { "Messages" },
+}
+
 hs.hotkey.bind({"cmd", "alt", "ctrl"}, "R", function()
   hs.reload()
   hs.alert.show("Config loaded")
 end)
 
-local appfinder = require("hs.appfinder")
-local app = nil
-local _win = nil
-local winframe = nil
+hs.hotkey.bind({"cmd", "alt", "ctrl"}, "O", function()
+  for i,v in pairs(apps) do
+    hs.application.launchOrFocus(v[1])
+  end
 
-local screenWatcher = nil
-local lastNumberOfScreens = #hs.screen.allScreens()
-
---monitor setups
-local display_mac = 1
-local display_left = 2
-local display_right = 3
-
-local triple_display = {
-    {"Google Chrome", nil, display_mac,  hs.layout.maximized, nil, nil},
-    {"Wunderlist",    nil, display_right, hs.layout.right50,   nil, nil},
-    {"LimeChat",      nil, display_right, hs.layout.left50,    nil, nil},
-    {"Twitter",       nil, display_right, hs.layout.left50,    nil, nil},
-    {"Slack",         nil, display_left, hs.layout.right50,   nil, nil},
-    {"Messages",      nil, display_mac,  hs.layout.maximized, nil, nil},
-    {"Adium",         nil, display_mac, hs.layout.maximized, nil, nil},
-    {"ITerm",         nil, display_right, hs.layout.right50,   nil, nil}
-}
-
-hs.hotkey.bind({"cmd", "alt", "ctrl"}, "F", function()
-  app = appfinder.appFromName("Wunderlist")
-  win = app:mainWindow()
-  print("x: " .. win:topLeft()["x"])
-  print("y: " .. win:topLeft()["y"])
-  print("width: " .. win:size()["w"])
-  print("height: " .. win:size()["h"])
+  hs.alert.show("Apps loaded")
 end)
 
-if lastNumberOfScreens == 3 then
-  local app_name = "Google Chrome"
-  hs.application.launchOrFocus(app_name)
-  app = appfinder.appFromName(app_name)
-  _win = app:mainWindow()
+hs.hotkey.bind({"cmd", "alt", "ctrl"}, "3", function()
+  for i,v in pairs(apps) do
+    local app = appfinder.appFromName(v[1])
 
-  winframe = hs.geometry.rect(135, 23, 1155, 877) --x, y, w, h
-  _win:setFrame(winframe)
+    if app then
+      local window = app:mainWindow()
+      local rectangle = v[2]
+      window:setFrame(rectangle)
+    end
+  end
 
-  app_name = "Slack"
-  hs.application.launchOrFocus(app_name)
-  app = appfinder.appFromName(app_name)
-  _win = app:mainWindow()
+  hs.alert.show("Apps positioned for 3 monitors")
+end)
 
-  winframe = hs.geometry.rect(-1920, -138, 1024, 1177)
-  _win:setFrame(winframe)
-
-  app_name = "Twitter"
-  hs.application.launchOrFocus(app_name)
-  app = appfinder.appFromName(app_name)
-  _win = app:mainWindow()
-
-  winframe = hs.geometry.rect(1440, -138, 394, 1177)
-  _win:setFrame(winframe)
-
-  app_name = "LimeChat"
-  hs.application.launchOrFocus(app_name)
-  app = appfinder.appFromName(app_name)
-  _win = app:mainWindow()
-
-  winframe = hs.geometry.rect(2636, 182, 720, 327)
-  _win:setFrame(winframe)
-
-  app_name = "iTerm"
-  hs.application.launchOrFocus(app_name)
-  app = appfinder.appFromName(app_name)
-  _win = app:mainWindow()
-
-  winframe = hs.geometry.rect(2717, -138, 640, 315)
-  _win:setFrame(winframe)
-
-  app_name = "Wunderlist"
-  hs.application.launchOrFocus(app_name)
-  app = appfinder.appFromName(app_name)
-  _win = app:mainWindow()
-
-  winframe = hs.geometry.rect(2497, 510, 861, 526)
-  _win:setFrame(winframe)
-end
+hs.hotkey.bind({"cmd", "alt", "ctrl"}, "F", function()
+  local win = hs.window:focusedWindow()
+  print(win:title() .. ": hs.geometry.rect(" .. win:topLeft()["x"] .. ", " .. win:topLeft()["y"] .. ", " .. win:size()["w"] .. ", " .. win:size()["h"] .. ")")
+end)
 
 hs.alert.show("Hammerspoon at your service")
-
