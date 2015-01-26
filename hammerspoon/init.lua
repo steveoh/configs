@@ -3,10 +3,10 @@ local apps = {
  -- app name, 3 monitor, 2 monitor, 1 monitor location
   { "Google Chrome", hs.geometry.rect(135, 23, 1083, 873) },
   { "Wunderlist", hs.geometry.rect(2497, 510, 861, 526) },
-  { "LimeChat", hs.geometry.rect(2636, 167, 720, 342) },
+  { "LimeChat", hs.geometry.rect(2640, 167, 720, 342) },
   { "Twitter", hs.geometry.rect(1440, -138, 394, 1177) },
   { "Slack", hs.geometry.rect(-1920, -138, 1024, 1177) },
-  { "iTerm", hs.geometry.rect(2717, -138, 640, 315) }
+  { "iTerm", hs.geometry.rect(2720, -138, 640, 303) }
   -- { "Adium", },
   -- { "Messages" },
 }
