@@ -1,0 +1,8 @@
+{
+  "jscs_path": {
+        "windows": "C:/Program Files/nodejs/node_modules/jscs/bin/jscs"
+  },
+  "node_path": {
+        "windows": "node"
+  }
+}
