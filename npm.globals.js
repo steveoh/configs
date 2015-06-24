@@ -1,1 +1,1 @@
-npm install -g bower grunt-cli jscs rimraf yo generator-dojo-widget
+npm install -g bower grunt-cli jscs jshint rimraf yo generator-dojo-widget
