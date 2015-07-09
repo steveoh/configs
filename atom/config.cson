@@ -1,0 +1,48 @@
+"*":
+  editor:
+    invisibles: {}
+    fontFamily: "Source Code Pro Semibold"
+    fontSize: 15
+    showIndentGuide: true
+    tabLength: 4
+  core:
+    themes: [
+      "seti-ui"
+      "seti-syntax"
+    ]
+    audioBeep: false
+    autoHideMenuBar: true
+    disabledPackages: [
+      "metrics"
+      "script"
+      "merge-conflicts"
+    ]
+    ignoredNames: [
+      ".eggs"
+      "*.pyc"
+      ".coverage"
+      "*.egg-info"
+      ".git"
+      ".tox"
+    ]
+  "exception-reporting":
+    userId: "**redacted**"
+  welcome:
+    showOnStartup: false
+  linter:
+    lintOnEditorFocus: false
+    showHighlighting: true
+    lintOnChangeInterval: 1000
+    lintDebug: false
+  "vim-mode":
+    useClipboardAsDefaultRegister: false
+  "linter-jshint": {}
+  emmet: {}
+  "linter-jscs": {}
+  "jscs-fixer": {}
+  whitespace:
+    ignoreWhitespaceOnCurrentLine: false
+  "linter-pep8":
+    maxLineLength: 160
+  "tree-view":
+    hideIgnoredNames: true
