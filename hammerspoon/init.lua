@@ -3,10 +3,11 @@ local apps = {
  -- app name, 3 monitor, 2 monitor, 1 monitor location
   { "Google Chrome", hs.geometry.rect(135, 23, 1083, 873), hs.geometry.rect(135, 23, 1083, 873) },
   { "Wunderlist", hs.geometry.rect(2497, 510, 861, 526), hs.geometry.rect(795, -529, 864, 526) },
-  { "LimeChat", hs.geometry.rect(2640, 167, 720, 342), hs.geometry.rect(945, -876, 720, 342) },
-  { "Twitter", hs.geometry.rect(1440, -138, 394, 1177), hs.geometry.rect(-256, -1177, 394, 1177) },
-  { "Slack", hs.geometry.rect(-1920, -138, 1024, 1177), hs.geometry.rect(140, -1177, 768, 1176) },
-  { "iTerm", hs.geometry.rect(2720, -138, 640, 303), hs.geometry.rect(1027, -1177, 640, 298) }
+  { "LimeChat", hs.geometry.rect(-895.0, 696.0, 895.0, 344.0), hs.geometry.rect(945, -876, 720, 342) },
+  { "Twitter", hs.geometry.rect(-895.0, -138.0, 394.0, 834.0), hs.geometry.rect(-256, -1177, 394, 1177) },
+  { "Slack", hs.geometry.rect(-1919.0, -138.0, 1025.0, 1177.0), hs.geometry.rect(140, -1177, 886, 1176) },
+  { "iTerm", hs.geometry.rect(1440.0, -138.0, 635.0, 337.0), hs.geometry.rect(1027, -1177, 640, 298) },
+  { "Evernote", hs.geometry.rect(1444, 512, 1048, 524), hs.geometry.rect(-253, -528, 1048, 524) }
   -- { "Adium", },
   -- { "Messages" },
 }
