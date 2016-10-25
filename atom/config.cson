@@ -39,7 +39,7 @@
     tabType: "soft"
   emmet: {}
   "exception-reporting":
-    userId: "515ef670-19dc-8052-fceb-9ece67822ec5"
+    userId: "redact"
   linter:
     lintDebug: true
     showInfoMessages: true
