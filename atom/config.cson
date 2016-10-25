@@ -1,21 +1,15 @@
 "*":
-  editor:
-    invisibles: {}
-    fontFamily: "Source Code Pro Semibold"
-    fontSize: 15
-    showIndentGuide: true
-    tabLength: 4
+  amdbutler: {}
+  "atom-htmltidy":
+    enableLinter: false
+    formatOnSave: false
+    tidyExecPath: "/usr/local/bin/tidy"
+  "atom-typescript": {}
   core:
-    themes: [
-      "seti-ui"
-      "seti-syntax"
-    ]
     audioBeep: false
-    autoHideMenuBar: true
     disabledPackages: [
       "metrics"
-      "script"
-      "merge-conflicts"
+      "atom-htmltidy"
     ]
     ignoredNames: [
       ".eggs"
@@ -25,24 +19,84 @@
       ".git"
       ".tox"
     ]
+    telemetryConsent: "no"
+    themes: [
+      "slack-ui"
+      "one-light-syntax"
+    ]
+  editor:
+    fontFamily: "FiraCode-Retina"
+    invisibles:
+      cr: ""
+      eol: "¬"
+      tab: "⇥"
+    normalizeIndentOnPaste: false
+    scrollPastEnd: true
+    scrollSensitivity: 80
+    showIndentGuide: true
+    showInvisibles: true
+    tabLength: 4
+    tabType: "soft"
+  emmet: {}
   "exception-reporting":
-    userId: "**redacted**"
-  welcome:
-    showOnStartup: false
+    userId: "515ef670-19dc-8052-fceb-9ece67822ec5"
   linter:
-    lintOnEditorFocus: false
-    showHighlighting: true
-    lintOnChangeInterval: 1000
-    lintDebug: false
+    lintDebug: true
+    showInfoMessages: true
+    statusBar: "Show all errors"
+  "linter-eslint":
+    globalNodePath: "/usr/local"
+    useGlobalEslint: true
+  "linter-flake8":
+    executablePath: "/usr/local/bin/flake8"
+    flakeErrors: true
+    hangClosing: true
+  "linter-python-pep8":
+    pep8DirToExecutable: "C:/Python27/ArcGISx6410.3/Scripts/pep8.exe"
+  "linter-scss-lint":
+    disableWhenNoConfigFileInPath: true
+    executablePath: "/Users/sgourley/.rvm/bin/atom_scss-lint"
+  "linter-stylint":
+    onlyRunWhenConfig: true
+  "markdown-preview":
+    breakOnSingleNewline: true
+  "merge-conflicts": {}
+  "omnisharp-atom":
+    enhancedHighlighting19: true
+  "python-yapf":
+    checkOnSave: true
+    yapfPath: "/usr/local/bin/yapf"
+  "tree-view":
+    autoReveal: true
+    hideIgnoredNames: true
+    showOnRightSide: true
+    squashDirectoryNames: true
   "vim-mode":
     useClipboardAsDefaultRegister: false
-  "linter-jshint": {}
-  emmet: {}
-  "linter-jscs": {}
-  "jscs-fixer": {}
+  welcome:
+    showOnStartup: false
   whitespace:
     ignoreWhitespaceOnCurrentLine: false
-  "linter-pep8":
-    maxLineLength: 160
-  "tree-view":
-    hideIgnoredNames: true
+  "xml-formatter":
+    xmlUtf8Header: false
+".basic.html.text":
+  editor:
+    normalizeIndentOnPaste: "false"
+    softWrap: true
+    tabLength: 2
+".console.python.text":
+  editor:
+    normalizeIndentOnPaste: "false"
+    tabLength: 4
+".js.source":
+  editor:
+    normalizeIndentOnPaste: "false"
+    tabLength: 4
+".json.source":
+  editor:
+    normalizeIndentOnPaste: "false"
+    tabLength: 2
+".python.source":
+  editor:
+    normalizeIndentOnPaste: "false"
+    tabLength: 4
