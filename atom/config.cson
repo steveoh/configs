@@ -39,14 +39,18 @@
     tabType: "soft"
   emmet: {}
   "exception-reporting":
-    userId: "redact"
+    userId: ""
   linter:
     lintDebug: true
     showInfoMessages: true
     statusBar: "Show all errors"
   "linter-eslint":
-    globalNodePath: "/usr/local"
-    useGlobalEslint: true
+    lintHtmlFiles: true
+    rulesToSilenceWhileTyping: [
+      "no-trailing-spaces"
+      "eol-last"
+      "semi"
+    ]
   "linter-flake8":
     executablePath: "/usr/local/bin/flake8"
     flakeErrors: true
