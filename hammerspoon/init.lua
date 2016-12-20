@@ -1,13 +1,14 @@
 local appfinder = require("hs.appfinder")
 local apps = {
  -- app name, 3 monitor, 2 monitor, 1 monitor location
-  { "Google Chrome", hs.geometry.rect(135, 23, 1083, 873), hs.geometry.rect(135, 23, 1083, 873), hs.geometry.rect(65.0, 23.0, 981.0, 873.0) },
-  { "Wunderlist", hs.geometry.rect(2497, 510, 861, 526), hs.geometry.rect(795, -529, 864, 526) },
-  { "LimeChat", hs.geometry.rect(-895.0, 696.0, 895.0, 344.0), hs.geometry.rect(945, -876, 720, 342), hs.geometry.rect(0.0, 552.0, 895.0, 344.0) },
-  { "Twitter", hs.geometry.rect(-895.0, -138.0, 394.0, 834.0), hs.geometry.rect(-256, -1177, 394, 1177), hs.geometry.rect(1045.0, 23.0, 394.0, 873.0) },
-  { "Slack", hs.geometry.rect(-1919.0, -138.0, 1025.0, 1177.0), hs.geometry.rect(161.0, -1177.0, 865.0, 1177.0), hs.geometry.rect(0.0, 23.0, 1025.0, 873.0) },
-  { "iTerm", hs.geometry.rect(1440.0, -138.0, 635.0, 337.0), hs.geometry.rect(1027, -1177, 640, 298), hs.geometry.rect(809.0, 23.0, 634.0, 337.0) },
-  { "Evernote", hs.geometry.rect(1444, 512, 1048, 524), hs.geometry.rect(-253, -528, 1048, 524) }
+  { "Google Chrome", hs.geometry.rect(134.0, 23.0, 1113.0, 1027.0), hs.geometry.rect(135, 23, 1083, 873), hs.geometry.rect(65.0, 23.0, 981.0, 873.0) },
+  { "Wunderlist", hs.geometry.rect(1256.0, -814.0, 861.0, 525.0), hs.geometry.rect(795, -529, 864, 526) },
+  -- { "LimeChat", hs.geometry.rect(-895.0, 696.0, 895.0, 344.0), hs.geometry.rect(945, -876, 720, 342), hs.geometry.rect(0.0, 552.0, 895.0, 344.0) },
+  { "Twitter", hs.geometry.rect(-443.0, -1417.0, 544.0, 1417.0), hs.geometry.rect(-256, -1177, 394, 1177), hs.geometry.rect(1045.0, 23.0, 394.0, 873.0) },
+  { "Slack", hs.geometry.rect(102.0, -1417.0, 1153.0, 1416.0), hs.geometry.rect(161.0, -1177.0, 865.0, 1177.0), hs.geometry.rect(0.0, 23.0, 1025.0, 873.0) },
+  { "iTerm", hs.geometry.rect(1257.0, -1417.0, 858.0, 331.0), hs.geometry.rect(1027, -1177, 640, 298), hs.geometry.rect(809.0, 23.0, 634.0, 337.0) },
+  { "OneNote", hs.geometry.rect(1257.0, -814.0, 860.0, 525.0), hs.geometry.rect(-253, -528, 1048, 524) },
+  { "Parallels Desktop", hs.geometry.rect(1256.0, -288.0, 861.0, 288.0) }
   -- { "Adium", },
   -- { "Messages" },
 }
