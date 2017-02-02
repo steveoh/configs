@@ -40,7 +40,27 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 # User configuration
 
-DEFAULT_USER="sgourley@SEDTS-L0E8-20IZ"
+DEFAULT_USER="$(whoami)"
+BULLETTRAIN_PROMPT_ORDER=(
+  uptime
+  status
+  custom
+  context
+  dir
+  perl
+  ruby
+  virtualenv
+  nvm
+  go
+  git
+  hg
+  cmd_exec_time
+)
+
+prompt_uptime(){
+    on=${${${(s: :)"$(uptime)"}[3]}%,}
+    prompt_segment $BULLETTRAIN_TIME_BG $BULLETTRAIN_TIME_FG $on
+}
 
 # aliases
 alias globals='npm -g list --depth=0'
@@ -48,7 +68,6 @@ alias npm='nocorrect npm'
 alias zshconfig='vim ~/.zshrc'
 alias ohmyzsh='vim ~/.oh-my-zsh'
 alias p='pianobar 2>/dev/null'
-alias u='uptime'
 alias home='cd ~ && clear'
 alias dc='docker-compose'
 
