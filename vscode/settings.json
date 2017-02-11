@@ -1,0 +1,20 @@
+// Place your settings in this file to overwrite the default settings
+{
+    "editor.tabSize": 2,
+    "editor.fontLigatures": true,
+    "editor.renderWhitespace": "boundary",
+    "telemetry.enableTelemetry": false,
+    "telemetry.enableCrashReporter": false,
+    "vim.useCtrlKeys": true,
+    "editor.fontFamily": "Hasklig",
+    "editor.fontSize": 13,
+    "editor.formatOnType": true,
+    "editor.cursorBlinking": "expand",
+    "editor.useTabStops": false,
+    "files.trimTrailingWhitespace": true,
+    "explorer.openEditors.visible": 0,
+    "html.suggest.angular1": false,
+    "html.suggest.ionic": false,
+    "extensions.autoUpdate": true,
+    "editor.cursorStyle": "block"
+  }
