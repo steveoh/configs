@@ -3,24 +3,11 @@
 [user]
     name = steveoh
     email = sgourley@utah.gov
-[filter "hawser"]
-    clean = git hawser clean %f
-    smudge = git hawser smudge %f
-    required = true
-[merge]
-    tool = p4mergetool
+    signingkey = 
 [mergetool]
     keepBackup = false
-[mergetool "p4mergetool"]
-    trustExitCode = false
-    cmd = 'C:\\Program Files\\Perforce\\p4merge.exe' $PWD/$BASE $PWD/$REMOTE $PWD/$LOCAL $PWD/$MERGED
-[diff]
-    tool = p4mergetool
-[difftool "p4mergetool"]
-    cmd = 'C:\\Program Files\\Perforce\\p4merge.exe' $LOCAL $REMOTE
 [core]
-    # editor = atom --wait
-    editor = 'c:/program files/sublime text 3/sublime_text.exe' --wait
+    editor = /usr/local/bin/vim
 [alias]
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
     s = status
@@ -33,10 +20,10 @@
     uc = reset --soft HEAD~1
     undo = reset HEAD~1 --mixed
     wip = !git add -u && git commit -m ":warning:"
-	pr  = "!f() { git fetch -fu ${2:-origin} refs/pull/$1/head:pr/$1 && git checkout pr/$1; }; f"
- 	pr-clean = "!git for-each-ref refs/heads/pr/* --format='%(refname)' | while read ref ; do branch=${ref#refs/heads/} ; git branch -D $branch ; done"
-    # use open for osx
-    open = !explorer `git config remote.origin.url
+    pr  = "!f() { git fetch -fu ${2:-origin} refs/pull/$1/head:pr/$1 && git checkout pr/$1; }; f"
+    pr-clean = "!git for-each-ref refs/heads/pr/* --format='%(refname)' | while read ref ; do branch=${ref#refs/heads/} ; git branch -D $branch ; done"
+    # use open for osx or explorer for windows
+    open = !open `git config remote.origin.url
     browse = !git open
 [credential]
 [push]
@@ -44,6 +31,14 @@
 [fetch]
     prune = true
 [filter "lfs"]
-    clean = git-lfs clean %f
-    smudge = git-lfs smudge %f
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
     required = true
+[diff]
+    compactionHeuristic = true
+[commit]
+    gpgsign = true
+[gpg]
+    program = /usr/local/bin/gpg
+
