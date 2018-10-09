@@ -23,6 +23,7 @@
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
     "git.autofetch": true,
+    "git.rebaseWhenSync": true,
     "html.suggest.angular1": false,
     "html.suggest.ionic": false,
     "telemetry.enableCrashReporter": false,
