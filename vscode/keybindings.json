@@ -37,5 +37,5 @@
   },{
     "key": "cmd+shift+u",
     "command": "workbench.action.closePanel",
-    "when": "activePanel==workbench.panel.output"
+    "when": "activePanel==workbench.panel.terminal"
 }]
