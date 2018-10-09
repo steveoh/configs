@@ -34,4 +34,8 @@
     "key": "ctrl+b",
     "command": "-amVim.ctrl+b",
     "when": "amVim.configuration.shouldBindCtrlCommands && editorTextFocus && amVim.mode != 'INSERT'"
-  }
+  },{
+    "key": "cmd+shift+u",
+    "command": "workbench.action.closePanel",
+    "when": "activePanel==workbench.panel.output"
+}]
