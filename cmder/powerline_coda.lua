@@ -18,4 +18,4 @@ local function get_conda_env_filter()
     return false
 end
 
-clink.prompt.register_filter(get_conda_env_filter, 100
+clink.prompt.register_filter(get_conda_env_filter, 100)
